@@ -23,7 +23,7 @@ tbl_df(powrdata2)
 powrdata3<-powrdata[(66637:69516), ]
 
 # Plot 4
-par(mfrow=c(2,2))
+par(mfrow=c(2,2),mar=c(3,4,1,1))
 plot(powrdata2$date[66637:69516],powrdata2$Global_active_power[66637:69516],"l",main="",xlab="",ylab="Global Active Power(kilowatts)")
 plot(powrdata2$date[66637:69516],powrdata2$Voltage[66637:69516],"l",main="",xlab="datetime",ylab="Voltage")
 plot(powrdata2$date[66637:69516],powrdata2$Sub_metering_1[66637:69516],type="n",main="",xlab="",ylab="Energy sub metering")
