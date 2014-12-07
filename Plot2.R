@@ -1,4 +1,4 @@
-# script to generate plot 1 of Exploratory data analysis project 1
+# script to generate plot 2 of Exploratory data analysis project 1
 fileUrl<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(fileUrl,destfile="powerdata.zip",method="curl")
 
@@ -19,8 +19,6 @@ powrdata2<-cbind(date,powrdata2)
 tbl_df(powrdata2)
 
 # subsetting powrdata2 to get only the relevant data for the plots; done manually
-
-powrdata3<-powrdata[(66637:69516), ]
 
 # Plot 2
 

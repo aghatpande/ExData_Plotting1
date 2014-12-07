@@ -1,4 +1,4 @@
-# script to generate plot 1 of Exploratory data analysis project 1
+# script to generate plot 3 of Exploratory data analysis project 1
 fileUrl<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(fileUrl,destfile="powerdata.zip",method="curl")
 
@@ -20,10 +20,8 @@ tbl_df(powrdata2)
 
 # subsetting powrdata2 to get only the relevant data for the plots; done manually
 
-powrdata3<-powrdata[(66637:69516), ]
-
 # Plot 3
-
+par(mar=c(4,4,2,1))
 plot(powrdata2$date[66637:69516],powrdata2$Sub_metering_1[66637:69516],type="n",main="",xlab="",ylab="Energy sub metering")
 points(powrdata2$date[66637:69516],powrdata2$Sub_metering_2[66637:69516],"l",col="red")
 points(powrdata2$date[66637:69516],powrdata2$Sub_metering_3[66637:69516],"l",col="blue")
